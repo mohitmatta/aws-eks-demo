@@ -129,3 +129,15 @@ kubectl apply -f service.yaml
 ```
 
 All deployment configurations are available in this github repository.
+
+### We are done with our Setup ###
+
+## Step - 5 : After demo is completed, delete the cluster and all associated resources to avoid billing ## 
+
+```
+eksctl delete cluster --name eksdemo --region us-east-1
+```
+
+```
+eksctl delete cluster --config-file cluster.yaml --disable-nodegroup-eviction
+```
