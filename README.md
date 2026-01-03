@@ -120,6 +120,12 @@ eksctl create cluster --name eksdemo --nodegroup-name ng-grp-default  --node-typ
 
 ## Step - 4 : Deploy application using deployment and expose it to public using load balancer ## 
 
+Setup the eks cluster context in kubeconfig file using below command and proceed with application deployment.
+
+```
+aws eks update-kubeconfig --region us-east-1 --name eksdemo
+```
+
 ```
 kubectl apply -f deployment.yaml
 ```
