@@ -55,7 +55,9 @@ sudo mv ./aws-iam-authenticator /usr/local/bin
 
 While you can use the AWS Console, the standard way is to use Infrastructure as Code (IaC). We'll use a declarative cluster.yaml to ensure our infra is reproducible.
 
+```
 eksctl create cluster -f cluster.yaml
+```
 
 ```
 apiVersion: eksctl.io/v1alpha5
@@ -106,8 +108,9 @@ eksctl create nodegroup --config-file=eks-managed-ng.yaml
 
 We can also create it using the below eksctl command:
 
+```
 eksctl create cluster --name eksdemo --nodegroup-name ng-grp-default  --node-type t3.small --nodes 2 --region us-east-1 --zones us-east-1a,us-east-1b
-
+```
 
 ## Note: Cluster creation will take 10 to 15 minutes of time. After cluster is  created successfully we can check nodes using below command.
 
